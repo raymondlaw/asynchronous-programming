@@ -1,0 +1,15 @@
+godel.cs.qc.cuny.edu
+alpha.cs.qc.cuny.edu
+apple.cs.qc.cuny.edu
+black.cs.qc.cuny.edu
+enigma.cs.qc.cuny.edu
+wizard.cs.qc.cuny.edu
+white.cs.qc.cuny.edu
+sigma.cs.qc.cuny.edu
+delta.cs.qc.cuny.edu
+omega.cs.qc.cuny.edu
+gamma.cs.qc.cuny.edu
+castle.cs.qc.cuny.edu
+theta.cs.qc.cuny.edu
+tundra.cs.qc.cuny.edu
+gothic.cs.qc.cuny.edu
