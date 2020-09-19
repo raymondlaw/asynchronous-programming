@@ -8,7 +8,7 @@ function after_read(err, data){
         console.error(err);
     }
     else{
-        let domains = data.split('\r\n');                   //split string on newlines
+        let domains = data.split('\r\n');              //split string on newlines
         for(let i=0 ; i < domains.length; i++){
             resolve(domains[i]);
         }
