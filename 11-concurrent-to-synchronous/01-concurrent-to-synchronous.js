@@ -1,27 +1,21 @@
-const fs = require("fs");
 const dns = require("dns");
-const input_file = "input/domains.txt"
+const domains = ["venus.cs.qc.cuny.edu", "mars.cs.qc.cuny.edu", "cs.qc.cuny.edu", "qc.cuny.edu", "cuny.edu"];
+const ip_addresses = [];
+let count = 0;
 
-fs.readFile(input_file, {encoding:"utf8"}, after_read);
-function after_read(err, data){
-    if(err){
-        console.error(err);
-    }
-    else{
-        let domains = data.split('\r\n');              //split string on newlines
-        for(let i=0 ; i < domains.length; i++){
-            resolve(domains[i]);
-        }
-    }
+for(let i = 0; i < domains.length; i++){
+	resolve(domains[i]);
 }
 function resolve(domain){
     dns.resolve(domain, after_resolution);
-    function after_resolution(err, records){
-        if(err){
-            console.error("Failed to resolve", domain);
-        }
-        else{
-            console.log(domain, records);
-        }
-    }
+	function after_resolution(err, records){
+		ip_addresses[count] = records;
+		count++;
+		if(count === domains.length){
+			next_task(ip_addresses.flat().join("\r\n"));
+		}
+	}
+}
+function next_task(str){
+	console.log(str);
 }
