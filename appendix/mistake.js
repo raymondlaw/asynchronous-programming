@@ -1,6 +1,6 @@
 const fs = require("fs");
 let fileContents;
-fs.readFile("input/file02.txt","utf8", (err, data) => {
+fs.readFile("input/file01.txt","utf8", (err, data) => {
     fileContents = data;
 });
 
